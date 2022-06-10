@@ -1,7 +1,6 @@
-import imp
 from flask import current_app as app
 
-from app.entities.users import User
+from app.users.user import User
 
 def list():
     with app.config['DB'].connect() as conn:

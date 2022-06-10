@@ -2,10 +2,11 @@ import logging
 import os
 
 from dotenv import load_dotenv
-from flask import Flask
+from flask import Blueprint, Flask
 from flask.helpers import make_response
 from sqlalchemy import create_engine
 
+from app.auth.handler import auth_bp
 from app.users.handler import user_bp
 
 
@@ -15,7 +16,12 @@ app = Flask(__name__)
 app.config['DB'] = create_engine(os.getenv('DATABASE_URL'), client_encoding='utf8', implicit_returning=True)
 app.logger.setLevel(logging.INFO)
 
-app.register_blueprint(user_bp)
+api = Blueprint('api', __name__, url_prefix='/api')
+
+api.register_blueprint(auth_bp)
+api.register_blueprint(user_bp)
+app.register_blueprint(api)
+
 
 @app.errorhandler(400)
 def bad_request(error):

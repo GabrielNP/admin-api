@@ -19,9 +19,9 @@ rm_dep: .venv
 include .env
 export
 makemigration:
-	migrate command=create --driver=$(driver) --migration=$(migration)
+	migrate command=create --driver=pgsql --migration=$(migration)
 
 include .env
 export
 migrate:
-	migrate command=execute
+	migrate command=execute --driver=pgsql

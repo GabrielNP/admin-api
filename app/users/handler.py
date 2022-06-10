@@ -1,6 +1,6 @@
 from flask.blueprints import Blueprint
 
-from app.repository import users as user_repo
+from app.users import repository as user_repo
 from app.pkg import response
 
 user_bp = Blueprint('user_bp', __name__, url_prefix='/users')

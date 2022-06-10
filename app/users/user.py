@@ -3,7 +3,6 @@ from datetime import date
 
 
 class User:
-
     def __init__(self, data):
         self.user_id = data['user_id'].hex
         self.name = data['name']
