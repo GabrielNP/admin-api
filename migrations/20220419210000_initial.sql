@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS users (
 	created_at timestamptz NOT NULL DEFAULT NOW(),
 	updated_at timestamptz NOT NULL DEFAULT NOW(),
 	deleted_at timestamptz NULL,
+	is_active bool NOT NULL DEFAULT false,
 	CONSTRAINT users_pk PRIMARY KEY (user_id),
 	CONSTRAINT users_un UNIQUE (email)
 );
