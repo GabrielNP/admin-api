@@ -24,7 +24,7 @@ makemigration:
 include .env
 export
 migrate:
-	migrate command=execute --driver=pgsql
+	migrate execute --driver=pgsql
 
 generate_rsa:
 	openssl genrsa -out private.pem 4096
