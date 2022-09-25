@@ -19,5 +19,5 @@ def list(data_list):
 def success(message: str, data: Any = None):
     return make_response(StdResponse(message=message, data=data).serialize()), HTTPStatus.OK
 
-def error(error: str, message: str):
-    return make_response(StdResponse(error=error, message=message).serialize()), HTTPStatus.BAD_REQUEST
+def error(error: str, message: str, status_code: int = HTTPStatus.BAD_REQUEST):
+    return make_response(StdResponse(error=error, message=message).serialize()), status_code

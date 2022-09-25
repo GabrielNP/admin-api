@@ -1,5 +1,5 @@
 import uuid
-from datetime import date
+from datetime import datetime
 from typing import Union
 
 
@@ -9,9 +9,9 @@ class User:
         self.name: str = data['name']
         self.email = data['email']
         self.password: str = data['password']
-        self.created_at: date = data['created_at'].isoformat()
-        self.updated_at: date = data['updated_at'].isoformat()
-        self.deleted_at: Union[date, None] = data['deleted_at']
+        self.created_at: datetime = data['created_at'].isoformat()
+        self.updated_at: datetime = data['updated_at'].isoformat()
+        self.deleted_at: Union[datetime, None] = data['deleted_at']
         self.is_active: bool = data['is_active']
         self.is_admin: bool = data['is_admin']
 

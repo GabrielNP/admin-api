@@ -7,6 +7,7 @@ from flask.helpers import make_response
 from sqlalchemy import create_engine
 
 from app.auth.handler import auth_bp
+from app.projects.handler import project_bp
 from app.users.handler import user_bp
 
 
@@ -19,6 +20,7 @@ app.logger.setLevel(logging.INFO)
 api = Blueprint('api', __name__, url_prefix='/api')
 
 api.register_blueprint(auth_bp)
+api.register_blueprint(project_bp)
 api.register_blueprint(user_bp)
 app.register_blueprint(api)
 

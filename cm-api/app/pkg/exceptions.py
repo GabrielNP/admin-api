@@ -21,3 +21,11 @@ class EntityNotFound(Exception):
     def __init__(self, entity: str):
         self.message: str = f'{entity} not found'
         super().__init__(self.message)
+
+class ForbiddenException(Exception):
+     """Exception raised when api receive forbiden calls.
+    Ex: valid authorization token but containing invalid user_id
+    """
+
+     def __init__(self):
+        super().__init__()

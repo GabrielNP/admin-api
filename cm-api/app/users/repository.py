@@ -9,7 +9,7 @@ def list():
         data = data.fetchall()
         return [User(dict(d)).serialize() for d in data]
 
-def search_by_email(email: str) -> User:
+def search_by_id(email: str) -> User:
     with app.config['DB'].connect() as conn:
         data = conn.execute(
             text("""
@@ -19,6 +19,20 @@ def search_by_email(email: str) -> User:
                 AND deleted_at IS NULL
             """),
             email=email
+        )
+        data = data.fetchone()
+        return User(data) if data else None
+
+def get_by_id(id: str) -> User:
+    with app.config['DB'].connect() as conn:
+        data = conn.execute(
+            text("""
+                SELECT *
+                FROM users
+                WHERE user_id = :id
+                AND deleted_at IS NULL
+            """),
+            id=id
         )
         data = data.fetchone()
         return User(data) if data else None
