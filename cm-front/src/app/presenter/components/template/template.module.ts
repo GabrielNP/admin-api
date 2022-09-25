@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
+import { MaterialModule } from "../modules/material.module";
 
 import { TemplateComponent } from "./template.component";
 
@@ -9,7 +10,8 @@ import { TemplateComponent } from "./template.component";
         TemplateComponent
     ],
     imports: [
-        RouterModule
+        RouterModule,
+        MaterialModule
     ],
 })
 export class TemplateModule {};

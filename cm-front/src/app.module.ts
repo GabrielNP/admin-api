@@ -6,6 +6,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { InfrastructureModule } from "./app/infrastructure/infrastructure.module";
 import { TemplateModule } from "./app/presenter/components/template/template.module";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { TemplateModule } from "./app/presenter/components/template/template.mod
     AppRoutingModule,
     InfrastructureModule,
     RouterModule,
-    TemplateModule
+    TemplateModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

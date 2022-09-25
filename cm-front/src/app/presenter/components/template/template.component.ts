@@ -6,10 +6,15 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./template.component.scss"]
 })
 export class TemplateComponent implements OnInit {
+  public menuBar: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  public toggleMenu() {
+    this.menuBar = !this.menuBar
+    console.log(this.menuBar);
+  }
 }

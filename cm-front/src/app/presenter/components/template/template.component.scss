@@ -1,0 +1,27 @@
+@import "../../../../styles.scss";
+
+.platform-bar {
+    background-color: $main-blue;
+    padding: 0.5rem;
+    color: $main-white;
+    font-family: $main-font;
+    font-size: large;
+    font-weight: bold;
+    display: flex;
+    height: 100px;
+    line-height: 40px;
+    max-height: 35px;
+
+    .icon {
+        margin-left: 5px;
+        padding: 5px;
+        fill: currentColor;
+        cursor: pointer;
+        overflow: visible;
+        border-radius: 50px;
+
+        &:hover {
+            background-color: $main-shaddow;
+        }
+    }
+}
