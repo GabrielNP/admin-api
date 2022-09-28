@@ -9,7 +9,7 @@ def list():
         data = data.fetchall()
         return [User(dict(d)).serialize() for d in data]
 
-def search_by_id(email: str) -> User:
+def search_by_email(email: str) -> User:
     with app.config['DB'].connect() as conn:
         data = conn.execute(
             text("""

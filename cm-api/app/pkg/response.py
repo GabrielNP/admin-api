@@ -21,3 +21,9 @@ def success(message: str, data: Any = None):
 
 def error(error: str, message: str, status_code: int = HTTPStatus.BAD_REQUEST):
     return make_response(StdResponse(error=error, message=message).serialize()), status_code
+
+def unauthorized():
+    return error('unauthorized', 'could not complete your request', HTTPStatus.UNAUTHORIZED)
+
+def forbidden():
+    return error('forbidden', 'you are not allowed to make this request', HTTPStatus.FORBIDDEN)

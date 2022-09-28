@@ -3,6 +3,8 @@ certifi==2022.5.18.1
 cffi==1.15.0
 charset-normalizer==2.0.12
 click==8.1.2
+cryptography==38.0.1
+Deprecated==1.2.13
 Flask==2.1.1
 Flask-Bcrypt==1.0.1
 Flask-SQLAlchemy==2.5.1
@@ -11,6 +13,7 @@ idna==3.3
 importlib-metadata==4.11.3
 itsdangerous==2.1.2
 Jinja2==3.1.1
+jwcrypto==1.4.2
 MarkupSafe==2.1.1
 Naked==0.1.31
 pkg_resources==0.0.0
@@ -26,4 +29,5 @@ shellescape==3.8.1
 SQLAlchemy==1.4.31
 urllib3==1.26.9
 Werkzeug==2.1.1
+wrapt==1.14.1
 zipp==3.8.0
