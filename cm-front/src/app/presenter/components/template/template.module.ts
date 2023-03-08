@@ -13,5 +13,6 @@ import { TemplateComponent } from "./template.component";
         RouterModule,
         MaterialModule
     ],
+    exports: [TemplateComponent]
 })
 export class TemplateModule {};
