@@ -1,0 +1,24 @@
+/* sidebar.component.scss */
+mat-sidenav-container {
+  height: 100%;
+}
+
+mat-sidenav {
+  width: 240px;
+  background-color: #2d3e50; // Sidebar background color
+  color: white;
+}
+
+mat-nav-list {
+  padding-top: 20px;
+}
+
+a {
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #4caf50; // Hover color
+}

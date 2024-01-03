@@ -1,0 +1,16 @@
+/* navbar.component.scss */
+mat-toolbar {
+    background-color: #3f51b5; // Primary color
+  }
+  
+  mat-icon {
+    margin-right: 8px;
+  }
+  
+  span {
+    flex: 1;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+  }
+  

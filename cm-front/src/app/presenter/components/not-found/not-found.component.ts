@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { TemplateModule } from '../template/template.module';
+import { TemplateComponent } from '../template/template.component';
 
 
 @Component({
@@ -9,7 +9,7 @@ import { TemplateModule } from '../template/template.module';
   selector: 'app-not-found',
   templateUrl: './not-found.component.html',
   styleUrls: ['./not-found.component.scss'],
-  imports: [TemplateModule]
+  imports: [TemplateComponent]
 })
 export class NotFoundComponent {
   constructor(private route: Router) {}

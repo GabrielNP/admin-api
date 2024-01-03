@@ -1,19 +1,5 @@
-<div>
-    <div></div>
-    <div>
-        <router-outlet>
-            <div class="platform-bar">
-                <div class="icon">
-                    <mat-icon aria-label="menu icon" (click)="toggleMenu()">menu</mat-icon>
-                </div>
-                <div>
-                    <p style="margin-left: 0.5rem;">CM Admin</p>
-                </div>
-            </div>
-        </router-outlet>
-    </div>
+<app-navbar></app-navbar>
+<div class="main-container">
+  <app-sidebar></app-sidebar>
+  <router-outlet></router-outlet>
 </div>
-
-<!--div *ngIf="menuBar">
-    
-</div> -->
